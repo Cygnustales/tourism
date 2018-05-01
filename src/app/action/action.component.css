@@ -1,0 +1,96 @@
+.custom-bg{
+    background-color: #004a70;
+}
+.loc{
+    display: inline-block;
+    margin:10px;
+    text-align: center;
+    width: 12%;
+}
+.circles{
+    border-radius: 60px;
+    width: 60px;
+    height: 60px;
+    margin-left: 25%;
+    background-color: #00968B;
+}
+.circles h6{
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 17px;
+}
+
+.tits{
+    color: grey;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 14px;
+    display: inline-block;
+    width: 12%;
+    margin:11px;
+    padding-left: 12px;
+}
+.locs{
+    display: inline-block;
+    margin-left:40px;
+    text-align: center;
+    width: 13%;
+}
+.lcs{
+    display: inline-block;
+    margin-left:42px;
+    margin-top: 10px;
+    text-align: center;
+    width: 13%;
+    font-size: 18px;
+    font-weight: bold;
+}
+.locs p{
+    color: grey;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0px;
+    padding-left: 10px;
+    line-height: 12px;
+}
+.circle{
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+}
+.circle h6{
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 38px;
+}
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+.custom-bg{
+    background-color: #004a70;
+}
+.curr{
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.img{
+    width: 100%;
+    margin-top: 20px;
+}
+.boxes{
+    width: 100%;
+    height: 60px;
+    background-color: #f1f1f1;
+    border: 1px solid gray;
+    margin-bottom: 10px;
+}

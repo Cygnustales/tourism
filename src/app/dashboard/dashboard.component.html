@@ -1,0 +1,152 @@
+<div class="container-fluid">
+	<div class="card">
+		<div class="card-header custom-bg">Global Overview</div>
+		<div class="card-block">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="card">
+						<div class="card-header custom-bg">Tourist Visit</div>
+						<div class="card-block">
+							<div echarts [options]="options" class="echart"></div>
+							<div class="row" style="margin-top: 20px;">
+								<div class="col-lg-6"><div echarts [options]="trees" (chartClick)="onChartClick($event)" class="echart"></div></div>
+								<div class="col-lg-6"><div echarts [options]="treess"  (chartClick)="onChartClick($event)" class="echart"></div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="card">
+						<div class="card-header custom-bg">Location</div>
+						<div class="card-block" align="center">
+							<div>
+								<div class="loc" align="center" (click)="goLoc()">
+									<div class="circles">
+										<h6>32%</h6>
+									</div>
+								</div>
+								<div class="loc" align="center" (click)="goLoc()">
+									<div class="circles">
+										<h6>23%</h6>
+									</div>
+								</div>
+								<div class="loc" align="center" (click)="goLoc()">
+									<div class="circles">
+										<h6>12%</h6>
+									</div>
+								</div>
+								<div class="loc" align="center" (click)="goLoc()">
+									<div class="circles">
+										<h6>12%</h6>
+									</div>
+								</div>
+								<div class="loc" align="center" (click)="goLoc()">
+									<div class="circles">
+										<h6>7%</h6>
+									</div>
+								</div>
+								<div class="loc" align="center" (click)="goLoc()">
+									<div class="circles">
+										<h6>7%</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer" align="center">
+							<p class="tits">Malioboro</p>
+							<p class="tits">Keraton Yogyakarta</p>
+							<p class="tits">Candi Borobudur</p>
+							<p class="tits">Goa Pindul</p>
+							<p class="tits">Alun-alun Kidul</p>
+							<p class="tits">Gunung Kidul</p>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header custom-bg">TGIF</div>
+						<div class="card-block" align="center">
+							<div class="locs" align="center">
+								<p>PULL</p>
+								<div class="circle" style="background-color: #DFA100;">
+									<h6>1890</h6>
+								</div>  
+							</div>
+							<div class="locs" align="center">
+								<p>PUSH</p>
+								<div class="circle" style="background-color: #318700;">
+									<h6>3441</h6>
+								</div>  
+							</div>
+							<div class="locs" align="center">
+								<p>FRICTION</p>
+								<div class="circle" style="background-color: #006690;">
+									<h6>3220</h6>
+								</div>  
+							</div>
+							<div class="locs" align="center">
+								<p>TGIF SCORE</p>
+								<div class="circle" style="background-color: #E62700;">
+									<h6>2111</h6>
+								</div>  
+							</div>
+						</div>
+						<div class="card-footer" align="center">
+							<select>
+								<option>All Location</option>
+							</select>
+							<select>
+								<option>All Location</option>
+							</select>
+							<select>
+								<option>All Location</option>
+							</select>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header custom-bg">Action Plan</div>
+						<div class="card-block" align="center">
+							<div class="col-lg-12">
+								<div class="row" align="center">
+									<div class="col-lg-4" align="center">
+										<p>PULL</p><div style="height: 5px; width: 100px; background-color: #007CBB; margin-bottom: 5px;"></div>
+										<button class="btn btn-outline" style="margin:7px;">Action 1</button>
+										<button class="btn btn-outline" style="margin:7px;">Action 2</button>
+										<button class="btn btn-outline" style="margin:7px;">Action 3</button>
+									</div>
+									<div class="col-lg-4" align="center" >
+										<p>PUSH</p><div style="height: 5px; width: 100px; background-color: #318700; margin-bottom: 5px;"></div>
+										<button class="btn btn-success-outline" style="margin:7px;">Action 1</button>
+										<button class="btn btn-success-outline" style="margin:7px;">Action 2</button>
+										<button class="btn btn-success-outline" style="margin:7px;">Action 3</button>
+									</div>
+									<div class="col-lg-4" align="center">
+										<p>FRICTION</p><div style="height: 5px; width: 100px; background-color: #D36000; margin-bottom: 5px;"></div>
+										<button class="btn btn-warning-outline" style="margin:7px;">Action 1</button>
+										<button class="btn btn-warning-outline" style="margin:7px;">Action 2</button>
+										<button class="btn btn-warning-outline" style="margin:7px;">Action 3</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer" align="center">
+								<div class="col-lg-12">
+									<div class="row" align="center">
+										<div class="col-lg-4" align="center">
+											<div class="arrow-up" style="border-bottom: 10px solid #007CBB;"></div>
+										</div>
+										<div class="col-lg-4" align="center">
+											<div class="arrow-up" style="border-bottom: 10px solid #318700;"></div>
+										</div>
+										<div class="col-lg-4" align="center">
+											<div class="arrow-up" style="border-bottom: 10px solid #D36000;"></div>
+										</div>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+        
+

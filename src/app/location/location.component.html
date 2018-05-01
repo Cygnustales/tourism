@@ -1,0 +1,181 @@
+<div class="container-fluid">
+    <div class="card">
+      	<div class="card-header custom-bg">Location Overview Borobudur</div>
+		<div class="card-block">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="card">
+						<div class="card-header custom-bg">Borobudur</div>
+						<div class="card-block">
+							<div class="row">
+								<div class="img-con">
+									<img class="img" src="./assets/borobudur.jpg">
+								</div>
+								<div class="img-con">
+									<img class="img" src="./assets/borobudur-map.jpg">
+								</div>
+							</div>
+							<div style="line-height: 16px; margin-top: 10px;">
+									<b>Address:</b> Jl. Badrawati, Borobudur, Magelang, Jawa Tengah <br>
+									<b>Construction started:</b> 750 AD<br>
+									<b>Area:</b> 2,500 m2
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header custom-bg">% Visit By Month</div>
+						<div class="card-block">
+							<div echarts [options]="jam" class="echart"></div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header custom-bg">Visiting hours</div>
+						<div class="card-block">
+							<div echarts [options]="options" class="echart"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="card">
+						<div class="card-header custom-bg">Visitor</div>
+						<div class="card-block">
+							<div echarts [options]="visit" class="echart"></div>
+							<br>
+							<div echarts [options]="trees" (chartClick)="onChartClick($event)" class="echart"></div>
+							<div echarts [options]="treess" (chartClick)="onChartClick($event)" class="echart"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="card">
+						<div class="card-header custom-bg">Spot</div>
+						<div class="card-block">
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="high" style="background-image: url('./assets/highlite.jpg');">
+										<select [ngModel]="lokasi" (ngModelChange)="setLocation($event)">
+											<optgroup label="MancaNegara"></optgroup>
+											<option [value]="0">All Locations</option>
+											<option [value]="1">Belanda</option>
+											<option [value]="2">Malaysia</option>
+											<option [value]="3">Jepang</option>
+											<option [value]="4">Amerika Serikat</option>
+											<option [value]="5">Singapura</option>
+											<option [value]="6">Perancis</option>
+											<option [value]="7">Jerman</option>
+											<option [value]="8">Australia</option>
+											<option [value]="9">Cina</option>
+											<option [value]="10">MancaNegara</option>
+											<optgroup label="Domestik"></optgroup>
+											<option [value]="11">Jawa Timur</option>
+											<option [value]="12">Jawa Tengah</option>
+											<option [value]="13">Jawa Barat</option>
+											<option [value]="14">DKI Jakarta</option>
+											<option [value]="15">Kalimantan Timur</option>
+											<option [value]="16">Banten</option>
+											<option [value]="17">Kalimantan Barat</option>
+											<option [value]="18">Domestik</option>
+										</select>
+										<!-- <select [ngModel]="ytd" (ngModelChange)="setYtd($event)">
+											<option [value]="0">YTD</option>
+											<option [value]="1">Jan</option>
+											<option [value]="2">Feb</option>
+											<option [value]="3">Mar</option>
+											<option [value]="4">Apr</option>
+											<option [value]="5">May</option>
+											<option [value]="6">Jun</option>
+											<option [value]="7">Jul</option>
+											<option [value]="8">Aug</option>
+											<option [value]="9">Sep</option>
+											<option [value]="10">Oct</option>
+											<option [value]="11">Nov</option>
+											<option [value]="12">Dec</option>
+										</select> -->
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<img class="imgs" src="./assets/spot.jpg">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header custom-bg">Popular Route</div>
+						<div class="card-block">
+							<div class="row">
+								<div class="col-lg-6">
+									<img class="img" src="./assets/tandr.jpg">
+								</div>
+								<div class="col-lg-6" align="center">
+									<p style="margin-bottom: 20px; margin-top:-5px; font-weight: bold;">Popular Route</p>
+									<div class="popular" align="center">
+										<div class="row">
+											<div class="col-lg-3" align="center"><div class="cr1"><p>{{fav[0]}}%</p></div></div>
+											<div class="col-lg-9" align="left" style="height:60px;">Candi <clr-icon shape="arrow" dir="right" size="24"></clr-icon> Souvenir</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-3" align="center"><div class="cr2"><p>{{fav[1]}}%</p></div></div>
+											<div class="col-lg-9" align="left" style="height:50px;">Candi <clr-icon shape="arrow" dir="right" size="24"></clr-icon> Souvenir <clr-icon shape="arrow" dir="right" size="24"></clr-icon> Museum</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-3" align="center"><div class="cr3"><p>{{fav[2]}}%</p></div></div>
+											<div class="col-lg-9" align="left" style="height:50px;">Candi <clr-icon shape="arrow" dir="right" size="24"></clr-icon> Souvenir <clr-icon shape="arrow" dir="right" size="24"></clr-icon> Gajah</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-3" align="center"><div class="cr4"><p>{{fav[3]}}%</p></div></div>
+											<div class="col-lg-9" align="left" style="height:50px;">Candi <clr-icon shape="arrow" dir="right" size="24"></clr-icon> Souvenir <clr-icon shape="arrow" dir="right" size="24"></clr-icon> Gajah <clr-icon shape="arrow" dir="right" size="24"></clr-icon> 4D</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header custom-bg">Social Media</div>
+						<div class="card-block">
+							<div class="row">
+								<div class="col-lg-3">
+									<img class="img" src="./assets/sm.jpg">
+								</div>
+								<div class="col-lg-9">
+									<div class="col-lg-12">
+										<div class="grads">
+											<div class="lefts"></div>
+											<div class="centers"><p>{{sos[0]}}</p></div>
+											<div class="rights"></div>
+										</div>
+									</div>
+									<div class="col-lg-12">
+										<div class="box">
+											<div class="row">
+												<div class="col-lg-6">
+													<b style="color:#D36000;">TICKET OVERPRICED</b><br>
+													"The ticket price might be a bit overpriced but its worth to visit."
+												</div>
+												<div class="col-lg-6" align="right">
+													<b style="color:#318700;">HERITAGE TEMPLE</b><br>
+													The Best Iconic & Heritage place in Central Java.
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-6">
+													<b style="color:#318700;">BAD EXPERIENCE</b><br>
+													“Great place to visit, however the experience is ruined by a few things."
+												</div>
+												<div class="col-lg-6" align="right">
+													<b style="color:#318700;">TICKET OVERPRICED</b><br>
+													Mighty Borobudur temple. Learn the culture learn the people learn the history
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
