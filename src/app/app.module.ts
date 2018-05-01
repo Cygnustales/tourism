@@ -14,6 +14,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { LocationComponent } from './location/location.component';
 import { ActionComponent } from './action/action.component';
+import { ScoreComponent } from './score/score.component';
 
 
 
@@ -26,7 +27,8 @@ import { ActionComponent } from './action/action.component';
     FooterComponent,
     LoginComponent,
     LocationComponent,
-    ActionComponent
+    ActionComponent,
+    ScoreComponent
   ],
   imports: [
     BrowserModule,

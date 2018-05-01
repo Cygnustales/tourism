@@ -7,6 +7,7 @@ import { LayoutComponent } from './shared/layout/layout.component';
 import { LoginComponent } from './login/login.component';
 import { LocationComponent } from './location/location.component';
 import { ActionComponent } from './action/action.component';
+import { ScoreComponent } from './score/score.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,13 @@ const routes: Routes = [
             component: ActionComponent,
             data: {
                 title: 'Action Plan'
+            },
+        },
+        {
+            path: 'score',
+            component: ScoreComponent,
+            data: {
+                title: 'TGIF Score'
             },
         }
     ]

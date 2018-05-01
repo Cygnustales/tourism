@@ -24,6 +24,9 @@ export class DashboardComponent implements OnInit {
     this.routes.navigateByUrl('/location');
   }
 
+  goSim() {
+    this.routes.navigateByUrl('/score');
+  }
   onChartClick(event) {
     console.log(event.name);
     const cnt = event.name;
