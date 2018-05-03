@@ -157,3 +157,18 @@
     border: 1px solid red;
     display: inline-block;
 }
+.lg1{
+    border-radius: 10px;
+    width: 30px;
+    height: 15px;
+    background-color: fuchsia;
+    display: inline-block;
+}
+.lg2{
+    border-radius: 10px;
+    width: 30px;
+    height: 15px;
+    background-color: lightskyblue;
+    display: inline-block;
+    margin-left: 15px;
+}
