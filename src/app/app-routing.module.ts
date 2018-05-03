@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { LocationComponent } from './location/location.component';
 import { ActionComponent } from './action/action.component';
 import { ScoreComponent } from './score/score.component';
+import { PlanComponent } from './plan/plan.component';
 
 
 const routes: Routes = [
@@ -42,6 +43,13 @@ const routes: Routes = [
             component: ScoreComponent,
             data: {
                 title: 'TGIF Score'
+            },
+        },
+        {
+            path: 'plan',
+            component: PlanComponent,
+            data: {
+                title: 'Action Plan'
             },
         }
     ]

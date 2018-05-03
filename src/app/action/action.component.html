@@ -7,6 +7,16 @@
 					<div class="card">
 						<div class="card-header custom-bg">Visited Location</div>
 						<div class="card-block" align="center">
+							<div class="row">
+								<div class="col-lg-6" align="right">
+									<div class="legend1"></div>
+									<p style="display: inline-block;">Visited Location</p>
+								</div>
+								<div class="col-lg-6" align="left">
+									<div class="legend2"></div>
+									<p style="display: inline-block;">Potential Location</p>
+								</div>
+							</div>
 							<div>
 								<div class="loc" align="center">
 									<div class="circles">
@@ -19,21 +29,25 @@
 									</div>
 								</div>
 								<div class="loc" align="center">
+									<div class="thin"><p>{{locations[6]}}%</p></div>
 									<div class="circles">
 										<h6>{{locations[2]}}%</h6>
 									</div>
 								</div>
 								<div class="loc" align="center">
+									<div class="thin"><p>{{locations[7]}}%</p></div>
 									<div class="circles">
 										<h6>{{locations[3]}}%</h6>
 									</div>
 								</div>
 								<div class="loc" align="center">
+									<div class="thin"><p>{{locations[8]}}%</p></div>
 									<div class="circles">
 										<h6>{{locations[4]}}%</h6>
 									</div>
 								</div>
 								<div class="loc" align="center">
+									<div class="thin"><p>{{locations[9]}}%</p></div>
 									<div class="circles">
 										<h6>{{locations[5]}}%</h6>
 									</div>
@@ -78,10 +92,10 @@
 													<clr-icon shape="compass" size="32" style="margin-top: -35px;"></clr-icon>
 												</div>
 												<div style="display: inline-block; width:55%;">
-													<p style="line-height: 14px;margin-top: 10px; text-align: left;"><b>Candi Exploration :</b><br>Good (6.2 | 113 review)</p>
+													<p style="line-height: 14px;margin-top: 10px; text-align: left;"><b>{{trv[0]}}</b><br>{{trv[2]}} ({{trv[3]}} | {{trv[4]}} review)</p>
 												</div>
 												<div style="display: inline-block; width:20%;">
-													<p style="line-height: 14px;margin-top: -30px; text-align: center; font-weight: bold;">$170</p>
+													<p style="line-height: 14px;margin-top: -30px; text-align: center; font-weight: bold;">${{trv[1]}}</p>
 												</div>
 											</div>
 											<div class="boxes">
@@ -89,10 +103,10 @@
 													<clr-icon shape="map" size="32" style="margin-top: -35px;"></clr-icon>
 												</div>
 												<div style="display: inline-block; width:55%;">
-													<p style="line-height: 14px;margin-top: 10px; text-align: left;"><b>Exploring Keraton :</b><br>Good (7.4 | 89 review)</p>
+													<p style="line-height: 14px;margin-top: 10px; text-align: left;"><b>{{trv[5]}}</b><br>{{trv[7]}} ({{trv[8]}} | {{trv[9]}} review)</p>
 												</div>
 												<div style="display: inline-block; width:20%;">
-													<p style="line-height: 14px;margin-top: -30px; text-align: center; font-weight: bold;">$65</p>
+													<p style="line-height: 14px;margin-top: -30px; text-align: center; font-weight: bold;">${{trv[6]}}</p>
 												</div>
 											</div>
 											<div class="boxes">
@@ -100,10 +114,10 @@
 													<clr-icon shape="car" size="32" style="margin-top: -35px;"></clr-icon>
 												</div>
 												<div style="display: inline-block; width:55%;">
-													<p style="line-height: 14px;margin-top: 10px; text-align: left;"><b>Vehicle Rental :</b><br>Good (7.2 | 78 review)</p>
+													<p style="line-height: 14px;margin-top: 10px; text-align: left;"><b>{{trv[10]}}</b><br>{{trv[12]}} ({{trv[13]}} | {{trv[14]}} review)</p>
 												</div>
 												<div style="display: inline-block; width:20%;">
-													<p style="line-height: 14px;margin-top: -30px; text-align: center; font-weight: bold;">$5</p>
+													<p style="line-height: 14px;margin-top: -30px; text-align: center; font-weight: bold;">${{trv[11]}}</p>
 												</div>
 											</div>
 										</div>
@@ -119,10 +133,10 @@
 													<clr-icon shape="shopping-bag" size="32" style="margin-top: -35px;"></clr-icon>
 												</div>
 												<div style="display: inline-block; width:55%;">
-													<p style="line-height: 14px;margin-top: 10px; text-align: left;"><b>House of Ramiten:</b><br>Good (6.2 | 113 review)</p>
+													<p style="line-height: 14px;margin-top: 10px; text-align: left;"><b>{{trvl[0]}}</b><br>{{trvl[2]}} ({{trvl[3]}} | {{trvl[4]}} review)</p>
 												</div>
 												<div style="display: inline-block; width:20%;">
-													<p style="line-height: 14px;margin-top: -30px; text-align: center; font-weight: bold;">$170</p>
+													<p style="line-height: 14px;margin-top: -30px; text-align: center; font-weight: bold;">${{trvl[1]}}</p>
 												</div>
 											</div>
 											<div class="boxes">
@@ -130,10 +144,10 @@
 													<clr-icon shape="shopping-bag" size="32" style="margin-top: -35px;"></clr-icon>
 												</div>
 												<div style="display: inline-block; width:55%;">
-													<p style="line-height: 14px;margin-top: 10px; text-align: left;"><b>Gudeg Pawon :</b><br>Good (7.4 | 89 review)</p>
+													<p style="line-height: 14px;margin-top: 10px; text-align: left;"><b>{{trvl[5]}}</b><br>{{trvl[7]}} ({{trvl[8]}} | {{trvl[9]}} review)</p>
 												</div>
 												<div style="display: inline-block; width:20%;">
-													<p style="line-height: 14px;margin-top: -30px; text-align: center; font-weight: bold;">$65</p>
+													<p style="line-height: 14px;margin-top: -30px; text-align: center; font-weight: bold;">${{trvl[6]}}</p>
 												</div>
 											</div>
 											<div class="boxes">
@@ -141,10 +155,10 @@
 													<clr-icon shape="shopping-bag" size="32" style="margin-top: -35px;"></clr-icon>
 												</div>
 												<div style="display: inline-block; width:55%;">
-													<p style="line-height: 14px;margin-top: 10px; text-align: left;"><b>Cubic Bar :</b><br>Good (7.2 | 78 review)</p>
+													<p style="line-height: 14px;margin-top: 10px; text-align: left;"><b>{{trvl[10]}}</b><br>{{trvl[12]}} ({{trvl[13]}} | {{trvl[14]}} review)</p>
 												</div>
 												<div style="display: inline-block; width:20%;">
-													<p style="line-height: 14px;margin-top: -30px; text-align: center; font-weight: bold;">$5</p>
+													<p style="line-height: 14px;margin-top: -30px; text-align: center; font-weight: bold;">${{trvl[11]}}</p>
 												</div>
 											</div>
 										</div>
@@ -190,7 +204,7 @@
 											</div>
 											<div class="row">
 												<div class="col-lg-6" style="border:1px solid #f1f1f1;">
-													<p style="margin-top:7px;">Good (6.7 | 287 review)</p>
+													<p style="margin-top:7px;">Good ({{pops[3]}} | ({{pops[4]}} review)</p>
 													<div class="col-lg-12">
 														<clr-icon shape="star" class="is-solid" ></clr-icon>
 														<clr-icon shape="star" class="is-solid" ></clr-icon>
@@ -199,7 +213,7 @@
 													</div>
 												</div>
 												<div class="col-lg-6" style="border:1px solid #f1f1f1;">
-													<p style="margin-top:7px;">Good (7.8 | 542 review)</p>
+													<p style="margin-top:7px;">Good ({{pops[5]}} | ({{pops[6]}} review)</p>
 													<div class="col-lg-12">
 														<clr-icon shape="star" class="is-solid" ></clr-icon>
 														<clr-icon shape="star" class="is-solid" ></clr-icon>
@@ -219,6 +233,60 @@
 				</div>  
         	</div>
       	</div>
-    </div>
+	</div>
+	<div class="card">
+			<div class="card-header custom-bg">TGIF Base Tourism Flow</div>
+			<div class="card-block">
+				<div class="row" align="center">
+					<div class="col-lg-2">1</div>
+					<div class="col-lg-2" align="left" style="margin-top:120px;">
+						<div class="satu">{{fv[1]}}</div>
+						<div class="dua">{{fv[2]}}</div>
+						<a href="#" aria-haspopup="true" class="tooltip tooltip-md tiga" role="tooltip">{{fv[0]}}<span class="tooltip-content">{{fv[3]}}</span></a>	
+					</div>
+					<div class="col-lg-2" align="left" style="margin-top:90px;">
+						<div class="satu">{{fv[5]}}</div>
+						<div class="dua">{{fv[6]}}</div>
+						<a href="#" aria-haspopup="true" class="tooltip tooltip-md tiga" role="tooltip">{{fv[4]}}<span class="tooltip-content">{{fv[7]}}</span></a>	
+					</div>
+					<div class="col-lg-2" align="left" style="margin-top:60px;">
+						<div class="satu">{{fv[9]}}</div>
+						<div class="dua">{{fv[10]}}</div>
+						<a href="#" aria-haspopup="true" class="tooltip tooltip-md tiga" role="tooltip">{{fv[8]}}<span class="tooltip-content">{{fv[11]}}</span></a>	
+					</div>
+					<div class="col-lg-2" align="left" style="margin-top:30px;">
+						<div class="satu">{{fv[13]}}</div>
+						<div class="dua">{{fv[14]}}</div>
+						<a href="#" aria-haspopup="true" class="tooltip tooltip-md tiga" role="tooltip">{{fv[12]}}<span class="tooltip-content">{{fv[15]}}</span></a>	
+					</div>
+					<div class="col-lg-2" align="left">
+						<div class="satu">{{fv[17]}}</div>
+						<div class="dua">{{fv[18]}}</div>
+						<a href="#" aria-haspopup="true" class="tooltip tooltip-md tiga" role="tooltip">{{fv[16]}}<span class="tooltip-content">{{fv[19]}}</span></a>	
+					</div>
+					
+				</div>
+			</div>
+		
+		<div class="card-footer">
+			<div class="row">
+				<div class="col-lg-2"></div>
+				<div class="col-lg-2"><img src="./assets/day/morning.png" height="50"></div>
+				<div class="col-lg-2"><img src="./assets/day/midday.png" height="50" style="float: left;"><img src="./assets/day/afternoon.png" height="50" style="float: right;"></div>
+				<div class="col-lg-2" align="right"><img src="./assets/day/evening.png" height="35"></div>
+				<div class="col-lg-2" align="center"><img src="./assets/day/night.png" height="40"></div>
+				<div class="col-lg-2" align="center"><img src="./assets/day/late.png" height="50"></div>
+				
+			</div>
+			<div class="row">
+				<div class="col-lg-2"></div>
+				<div class="col-lg-2"><h6>Morning</h6></div>
+				<div class="col-lg-2"><h6 style="float: left;">Mid Day</h6><h6 style="float: right;">Afternoon</h6></div>
+				<div class="col-lg-2" align="right"><h6>Evening</h6></div>
+				<div class="col-lg-2" align="center"><h6>Night</h6></div>
+				<div class="col-lg-2" align="center"><h6>Late Night</h6></div>
+			</div>
+		</div>
+	</div>
 </div>
       

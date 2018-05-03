@@ -15,7 +15,8 @@ import { LoginComponent } from './login/login.component';
 import { LocationComponent } from './location/location.component';
 import { ActionComponent } from './action/action.component';
 import { ScoreComponent } from './score/score.component';
-
+import { PlanComponent } from './plan/plan.component';
+import { NouisliderModule } from 'ng2-nouislider';
 
 
 @NgModule({
@@ -28,14 +29,17 @@ import { ScoreComponent } from './score/score.component';
     LoginComponent,
     LocationComponent,
     ActionComponent,
-    ScoreComponent
+    ScoreComponent,
+    PlanComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ClarityModule,
     NgxEchartsModule,
-    FormsModule
+    FormsModule,
+    NouisliderModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

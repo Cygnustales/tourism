@@ -94,3 +94,66 @@
     border: 1px solid gray;
     margin-bottom: 10px;
 }
+.satu{
+    border-radius: 10px;
+    width: 25%;
+    background-color: fuchsia;
+    color: white;
+    font-size: 12px;
+    margin:5px;
+    text-align: center;
+}
+.dua{
+    border-radius: 10px;
+    width: 50%;
+    background-color: lightskyblue;
+    color: white;
+    font-size: 12px;
+    margin:5px;
+    text-align: center;
+}
+.tiga{
+    border-radius: 10px;
+    width: 75%;
+    background-color: darkslateblue;
+    color: white;
+    font-size: 12px;
+    margin:5px;
+    text-align: center;
+}
+.thin{
+    position: absolute;
+    border: 3px solid red;
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
+    margin-top: 10px;
+    margin-left: 3px;
+}
+.thin p{
+    position: absolute;
+    margin-top: -12px;
+    margin-left: 50px;
+    width: 25px;
+    color: white;
+    font-size: 10px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: red;
+}
+.legend1{
+    width: 15px;
+    color: white;
+    height: 15px;
+    border-radius: 50px;
+    background-color: #00968B;
+    display: inline-block;
+}
+.legend2{
+    width: 15px;
+    color: white;
+    height: 15px;
+    border-radius: 50px;
+    border: 1px solid red;
+    display: inline-block;
+}
