@@ -19,6 +19,7 @@ export class LocationComponent implements OnInit {
   fav: any;
   sos: any;
   params: any;
+  geo: any;
 
   month = [{
     0 : [8, 7, 8, 6, 4, 10, 11, 9, 5, 13, 5, 15],
@@ -97,11 +98,136 @@ export class LocationComponent implements OnInit {
     10: [3.75],
     11: [4.69],
     12: [5.00],
-    13: [5.31],
+    13: [4.31],
     14: [4.69],
-    15: [5.31],
+    15: [4.31],
     16: [5.00],
     17: [3.44],
+  }];
+  spot = [{
+    0: 10855,
+    1: 131,
+    2: 105,
+    3: 75,
+    4: 67,
+    5: 62,
+    6: 57,
+    7: 49,
+    8: 49,
+    9: 43,
+    10: 150,
+    11: 2557,
+    12: 1963,
+    13: 1802,
+    14: 755,
+    15: 403,
+    16: 383,
+    17: 262,
+  }];
+  ytds = [{
+    0: [10855, 2280, 2062, 2714, 2497, 1303],
+    1: [131
+    , 28
+    , 25
+    , 33
+    , 30
+    , 16],
+    2: [105
+    , 22
+    , 20
+    , 26
+    , 24
+    , 13],
+    3: [75
+    , 16
+    , 14
+    , 19
+    , 17
+    , 9],
+    4: [67
+    , 14
+    , 13
+    , 17
+    , 15
+    , 8],
+    5: [62
+    , 13
+    , 12
+    , 16
+    , 14
+    , 7],
+    6: [57
+    , 12
+    , 11
+    , 14
+    , 13
+    , 7],
+    7: [49
+    , 10
+    , 9
+    , 12
+    , 11
+    , 6],
+    8: [49
+    , 10
+    , 9
+    , 12
+    , 11
+    , 6],
+    9: [43
+    , 9
+    , 8
+    , 11
+    , 10
+    , 5],
+    10: [2557
+    , 537
+    , 486
+    , 639
+    , 588
+    , 307],
+    11: [1963
+    , 412
+    , 373
+    , 491
+    , 452
+    , 236],
+    12: [1802
+    , 378
+    , 342
+    , 451
+    , 414
+    , 216],
+    13: [755
+    , 159
+    , 143
+    , 189
+    , 174
+    , 91],
+    14: [403
+    , 85
+    , 77
+    , 101
+    , 93
+    , 48],
+    15: [383
+    , 80
+    , 73
+    , 96
+    , 88
+    , 46],
+    16: [262
+    , 55
+    , 50
+    , 65
+    , 60
+    , 31],
+    17: [1943
+    , 408
+    , 369
+    , 486
+    , 447
+    , 233]
   }];
 
   constructor(private routes: Router) { }
@@ -111,6 +237,12 @@ export class LocationComponent implements OnInit {
     this.treeTwo();
     this.loadHours();
     this.visitor();
+    this.setYtd(0);
+  }
+
+  lebar(w) {
+    const l = Number( w * 18);
+    return l;
   }
 
   loadHours() {
@@ -121,7 +253,6 @@ export class LocationComponent implements OnInit {
     this.sos = this.social[0][num];
     this.line();
     this.hour();
-    console.log(this.fav[0]);
   }
 
   setLocation(event) {
@@ -131,18 +262,17 @@ export class LocationComponent implements OnInit {
   }
   setYtd(event) {
     this.ytd = event;
-    console.log(event);
+    const d = this.ytds[0][this.lokasi];
+    this.geo = d[this.ytd];
   }
 
   onChartClick(event) {
-    console.log(event.name);
     const cnt = event.name;
     const country = cnt.replace(' ', '');
     this.routes.navigateByUrl('/action?a=' + country);
   }
 
   hour() {
-    console.log(this.line1);
     this.options = {
       title : {
           show: false,

@@ -27,11 +27,110 @@ export class ScoreComponent implements OnInit {
       stepped: true
     }
   };
+  rate: any = 10000;
+  hotel: any = 100;
+  budget: any = 10000;
+  expo: any = 20;
+  increase: any = 150;
+  hashtag: any = 30;
+  geotag: any = 0;
+  tgifData: any;
+  touristData: any;
+  opttourist: any;
+  tgif = [6102
+    , 6018
+    , 5898
+    , 5488
+    , 5331
+    , 5868
+    , 7028
+    , 9105];
+  tourist = [4357
+    , 4297
+    , 4212
+    , 3919
+    , 3807
+    , 4190
+    , 5018
+    , 6502];
   constructor() { }
 
   ngOnInit() {
     this.visitor();
+    this.simulate();
   }
+
+  simulate() {
+    const mrate = (this.rate / 100 ) * 2;
+    const mhotel = (this.hotel * -3);
+    const mbudget = (this.budget * 4) / 100;
+    const mexpo = this.expo * 11;
+    const sum = (mrate + mhotel + mbudget + mexpo + this.increase + this.hashtag + this.geotag) / 20000;
+    const sums = (1 + (mrate + mhotel + mbudget + mexpo + this.increase + this.hashtag + this.geotag) / 20000).toFixed(2);
+    const temp_tgif = [6102, 6018, 5898, 5488];
+    const temp_tourist = [4357, 4297, 4212, 3919];
+    const temp_tourist2 = [4357, 4297, 4212, 3919];
+    console.log('rate', mrate);
+    console.log('hotel', mhotel);
+    console.log('budget', mbudget);
+    console.log('expo', mexpo);
+    console.log('sum', sum);
+    for (let i = 0; i < this.tgif.length; i++) {
+      const e = this.tgif[i];
+      if ( i === 4 || i === 6) {
+        const f = 1.3 + sum;
+        const g = Number(Math.round(e * f).toFixed(0));
+        temp_tgif.push(g);
+      }
+      if ( i === 5 ) {
+        const f = 1.5 + sum;
+        const g = Number(Math.round(e * f).toFixed(0));
+        temp_tgif.push(g);
+      }
+      if ( i === 7 ) {
+        const f = 1.6 + sum;
+        const g = Number(Math.round(e * f).toFixed(0));
+        temp_tgif.push(g);
+      }
+    }
+    for (let i = 0; i < this.tourist.length; i++) {
+      const e = this.tourist[i];
+      if ( i === 4) {
+        const h = Number(((this.tgif[4] * 71) / 100).toFixed(0));
+        const f = 1.3 + sum;
+        const g = Number(Math.round(h * f).toFixed(0));
+        temp_tourist2.push(g);
+        temp_tourist.push(h);
+      }
+      if ( i === 5) {
+        const h = Number(((this.tgif[5] * 71) / 100).toFixed(0));
+        const f = 1.5 + sum;
+        const g = Number(Math.round(h * f).toFixed(0));
+        temp_tourist2.push(g);
+        temp_tourist.push(h);
+      }
+      if ( i === 6) {
+        const h = Number(((this.tgif[6] * 71) / 100).toFixed(0));
+        const f = 1.3 + sum;
+        const g = Number(Math.round(h * f).toFixed(0));
+        temp_tourist2.push(g);
+        temp_tourist.push(h);
+      }
+      if ( i === 7) {
+        const h = Number(((this.tgif[7] * 71) / 100).toFixed(0));
+        const f = 1.6 + sum;
+        const g = Number(Math.round(h * f).toFixed(0));
+        temp_tourist2.push(g);
+        temp_tourist.push(h);
+      }
+    }
+    console.log(temp_tourist);
+    this.tgifData = temp_tgif;
+    this.touristData = temp_tourist;
+    this.opttourist = temp_tourist2;
+    this.visitor();
+  }
+
   visitor() {
     this.visit = {
       title : {
@@ -46,7 +145,7 @@ export class ScoreComponent implements OnInit {
       tooltip : {
           trigger: 'axis'
       },
-      color: ['gray', 'yellow', 'blue', 'red'],
+      color: ['gray', 'green', 'blue', 'red'],
       legend: {
           bottom: 'bottom',
           data: ['Tourist Visit (in million)', 'Optimized Visit (in million)', 'TGIF', 'Optimized TGIF'],
@@ -82,6 +181,7 @@ export class ScoreComponent implements OnInit {
                 },
               },
               splitLine: {
+                show: false,
                 lineStyle: {
                   color: '#f1f1f1',
                 },
@@ -109,6 +209,7 @@ export class ScoreComponent implements OnInit {
               },
             },
             splitLine: {
+              show: false,
               lineStyle: {
                 color: '#f1f1f1',
               },
@@ -119,7 +220,7 @@ export class ScoreComponent implements OnInit {
               },
             },
             boundaryGap : false,
-            data :  ['', '', '', '', '', '', 'Prediction', 'Prediction', 'Prediction', 'Prediction', 'Prediction', 'Prediction']
+            data :  ['', '', '', '', '', 'Prediction', 'Prediction', 'Prediction', 'Prediction']
         }
       ],
       yAxis: [
@@ -147,40 +248,19 @@ export class ScoreComponent implements OnInit {
               name: 'Tourist Visit (in million)',
               type: 'line',
               smooth: true,
-              data: [4357
-                , 4297
-                , 4212
-                , 3919
-                , 3807
-                , 4190
-                , 5018
-                , 6502]
+              data: this.touristData
           },
           {
               name: 'Optimized Visit (in million)',
               type: 'line',
               smooth: true,
-              data: [4357
-                , 4297
-                , 4212
-                , 3919
-                , 4939
-                , 6275
-                , 6511
-                , 10387]
+              data: this.opttourist
           },
           {
               name: 'TGIF',
               type: 'line',
               smooth: true,
-              data: [6102
-                , 6018
-                , 5898
-                , 5488
-                , 5331
-                , 5868
-                , 7028
-                , 9105]
+              data: this.tgifData
           },
           {
               name: 'Optimized TGIF',

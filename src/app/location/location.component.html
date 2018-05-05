@@ -25,6 +25,29 @@
 					<div class="card">
 						<div class="card-header custom-bg">% Visit By Month</div>
 						<div class="card-block">
+								<select [ngModel]="lokasi" (ngModelChange)="setLocation($event)" class="monthdown">
+										<optgroup label="MancaNegara"></optgroup>
+										<option [value]="0">All Locations</option>
+										<option [value]="1">Belanda</option>
+										<option [value]="2">Malaysia</option>
+										<option [value]="3">Jepang</option>
+										<option [value]="4">Amerika Serikat</option>
+										<option [value]="5">Singapura</option>
+										<option [value]="6">Perancis</option>
+										<option [value]="7">Jerman</option>
+										<option [value]="8">Australia</option>
+										<option [value]="9">Cina</option>
+										<option [value]="10">MancaNegara</option>
+										<optgroup label="Domestik"></optgroup>
+										<option [value]="11">Jawa Timur</option>
+										<option [value]="12">Jawa Tengah</option>
+										<option [value]="13">Jawa Barat</option>
+										<option [value]="14">DKI Jakarta</option>
+										<option [value]="15">Kalimantan Timur</option>
+										<option [value]="16">Banten</option>
+										<option [value]="17">Kalimantan Barat</option>
+										<option [value]="18">Domestik</option>
+									</select>
 							<div echarts [options]="jam" class="echart"></div>
 						</div>
 					</div>
@@ -48,12 +71,13 @@
 				</div>
 				<div class="col-lg-4">
 					<div class="card">
-						<div class="card-header custom-bg">Spot</div>
+						<div class="card-header custom-bg">Highlited Spot</div>
 						<div class="card-block">
 							<div class="row">
 								<div class="col-lg-6">
 									<div class="high" style="background-image: url('./assets/highlite.jpg');">
-										<select [ngModel]="lokasi" (ngModelChange)="setLocation($event)">
+										
+										<!-- <select [ngModel]="lokasi" (ngModelChange)="setLocation($event)">
 											<optgroup label="MancaNegara"></optgroup>
 											<option [value]="0">All Locations</option>
 											<option [value]="1">Belanda</option>
@@ -75,25 +99,26 @@
 											<option [value]="16">Banten</option>
 											<option [value]="17">Kalimantan Barat</option>
 											<option [value]="18">Domestik</option>
-										</select>
-										<!-- <select [ngModel]="ytd" (ngModelChange)="setYtd($event)">
+										</select> -->
+										<select [ngModel]="ytd" (ngModelChange)="setYtd($event)" style="margin: 10px;">
 											<option [value]="0">YTD</option>
 											<option [value]="1">Jan</option>
 											<option [value]="2">Feb</option>
 											<option [value]="3">Mar</option>
 											<option [value]="4">Apr</option>
 											<option [value]="5">May</option>
-											<option [value]="6">Jun</option>
+											<!-- <option [value]="6">Jun</option>
 											<option [value]="7">Jul</option>
 											<option [value]="8">Aug</option>
 											<option [value]="9">Sep</option>
 											<option [value]="10">Oct</option>
 											<option [value]="11">Nov</option>
-											<option [value]="12">Dec</option>
-										</select> -->
+											<option [value]="12">Dec</option> -->
+										</select>
 									</div>
 								</div>
 								<div class="col-lg-6">
+									<p class="geo">Derived from <b style="color:orange;">{{ geo }}</b> Geotagged Images</p>
 									<img class="imgs" src="./assets/spot.jpg">
 								</div>
 							</div>
@@ -141,7 +166,7 @@
 									<div class="col-lg-12">
 										<div class="grads">
 											<div class="lefts"></div>
-											<div class="centers"><p>{{sos[0]}}</p></div>
+											<div class="centers" [style.marginLeft.%]="lebar(sos[0])"><p>{{sos[0]}}</p></div>
 											<div class="rights"></div>
 										</div>
 									</div>

@@ -17,31 +17,31 @@
 						<div class="card-block" style="margin:10px;">
 							<div class="form-group">
 								<label for="aForm_1">Exchange Rate 1 USD - IDR</label>
-								<input type="text" id="aForm_1" placeholder="Enter value here" size="25">
+								<input type="text" id="aForm_1" [(ngModel)]="rate" (ngModelChange)="simulate()" placeholder="Enter value here" size="25">
 							</div>
 							<div class="form-group">
 								<label for="aForm_1">Hotel Rate (US$)</label>
-								<input type="text" id="aForm_1" placeholder="Enter value here" size="25">
+								<input type="text" id="aForm_1" [(ngModel)]="hotel" (ngModelChange)="simulate()" placeholder="Enter value here" size="25">
 							</div>
 							<div class="form-group">
 								<label for="aForm_1">Tourist Campaign Budget</label>
-								<input type="text" id="aForm_1" placeholder="Enter value here" size="25">
+								<input type="text" id="aForm_1" [(ngModel)]="budget" (ngModelChange)="simulate()" placeholder="Enter value here" size="25">
 							</div>
 							<div class="form-group">
 								<label for="aForm_1">International Travel Expo</label>
-								<input type="text" id="aForm_1" placeholder="Enter value here" size="25">
+								<input type="text" id="aForm_1" [(ngModel)]="expo" (ngModelChange)="simulate()" placeholder="Enter value here" size="25">
 							</div>
 							<div class="form-group">
 								<label for="aForm_1">Infrastructure Budget Increase %</label>
-								<input type="text" id="aForm_1" placeholder="Enter value here" size="25">
+								<input type="text" id="aForm_1" [(ngModel)]="increase" (ngModelChange)="simulate()" placeholder="Enter value here" size="25">
 							</div>
 							<div class="form-group">
 								<label for="aForm_1">Hashtag Increase </label>
-								<input type="text" id="aForm_1" placeholder="Enter value here" size="25">
+								<input type="text" id="aForm_1" [(ngModel)]="hashtag" (ngModelChange)="simulate()" placeholder="Enter value here" size="25">
 							</div>
 							<div class="form-group">
 								<label for="aForm_1">Geotaged Increase</label>
-								<input type="text" id="aForm_1" placeholder="Enter value here" size="25">
+								<input type="text" id="aForm_1" [(ngModel)]="geotag" (ngModelChange)="simulate()" placeholder="Enter value here" size="25">
 							</div>
 						</div>
 					</div>

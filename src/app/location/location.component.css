@@ -58,7 +58,6 @@ height: 10px;;
     background-color: lightskyblue;
     border-radius: 30px;
     position: absolute;
-    margin-left: 80%;
     margin-top: -10px;
     text-align: center;
 }
@@ -122,4 +121,13 @@ height: 10px;;
     padding-top: 0px;
     text-align: center;
     font-size: 10px;
+}
+.geo{
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
 }

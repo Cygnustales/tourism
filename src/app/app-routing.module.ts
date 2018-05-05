@@ -9,6 +9,7 @@ import { LocationComponent } from './location/location.component';
 import { ActionComponent } from './action/action.component';
 import { ScoreComponent } from './score/score.component';
 import { PlanComponent } from './plan/plan.component';
+import { DataComponent } from './data/data.component';
 
 
 const routes: Routes = [
@@ -50,6 +51,13 @@ const routes: Routes = [
             component: PlanComponent,
             data: {
                 title: 'Action Plan'
+            },
+        },
+        {
+            path: 'data',
+            component: DataComponent,
+            data: {
+                title: 'Data'
             },
         }
     ]
