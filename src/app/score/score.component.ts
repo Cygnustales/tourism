@@ -253,6 +253,9 @@ export class ScoreComponent implements OnInit {
           {
               name: 'Optimized Visit (in million)',
               type: 'line',
+              lineStyle: {
+                type: 'dashed'
+              },
               smooth: true,
               data: this.opttourist
           },
@@ -265,6 +268,9 @@ export class ScoreComponent implements OnInit {
           {
               name: 'Optimized TGIF',
               type: 'line',
+              lineStyle: {
+                type: 'dashed'
+              },
               smooth: true,
               data: [6102
                 , 6018
