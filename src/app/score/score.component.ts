@@ -124,7 +124,6 @@ export class ScoreComponent implements OnInit {
         temp_tourist.push(h);
       }
     }
-    console.log(temp_tourist);
     this.tgifData = temp_tgif;
     this.touristData = temp_tourist;
     this.opttourist = temp_tourist2;

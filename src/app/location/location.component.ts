@@ -267,9 +267,11 @@ export class LocationComponent implements OnInit {
   }
 
   onChartClick(event) {
+    // console.log(event.dataIndex);
+    // console.log(event.seriesName);
     const cnt = event.name;
     const country = cnt.replace(' ', '');
-    this.routes.navigateByUrl('/action?a=' + country);
+    this.routes.navigateByUrl('/action?a=' + event.dataIndex + '&i=' + event.seriesName);
   }
 
   hour() {
