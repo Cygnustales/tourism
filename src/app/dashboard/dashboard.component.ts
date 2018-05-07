@@ -356,14 +356,14 @@ constructor(private routes: Router, private services: DataService) { }
                 }
             },
             data: [
-                {
-                    name: 'All Tourist (' + this.data[0] + ')',
-                    value: this.data[0]
-                },
-                {
-                    name: 'Mancanegara (' + this.data[1] + ')',
-                    value: this.data[1]
-                },
+                // {
+                //     name: 'All Tourist (' + this.data[0] + ')',
+                //     value: this.data[0]
+                // },
+                // {
+                //     name: 'Mancanegara (' + this.data[1] + ')',
+                //     value: this.data[1]
+                // },
                 {
                     name: 'Belanda (' + this.data[2] + ')',
                     value: this.data[2]
@@ -457,10 +457,10 @@ this.treess = {
                 },
             },
             data: [
-                {
-                    name: 'Domestik (' + this.data[12] + ')',
-                    value: this.data[12]
-                },
+                // {
+                //     name: 'Domestik (' + this.data[12] + ')',
+                //     value: this.data[12]
+                // },
                 {
                     name: 'Jawa Timur (' + this.data[13] + ')',
                     value: this.data[13]

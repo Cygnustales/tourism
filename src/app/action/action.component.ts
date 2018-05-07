@@ -330,16 +330,40 @@ export class ActionComponent implements OnInit {
   trvl: any;
   fv: any;
   series: any;
+
+  ls =
+  [{id: 0, name : 'Belanda'},
+  {id: 1, name : 'Malaysia'},
+  {id: 2, name : 'Jepang'},
+  {id: 3, name : 'Amerika Serikat'},
+  {id: 4, name : 'Singapura'},
+  {id: 5, name : 'Perancis'},
+  {id: 6, name : 'Jerman'},
+  {id: 7, name : 'Australia'},
+  {id: 8, name : 'Cina'},
+  {id: 9, name : ' Lainnya MancaNegara'},
+  {id: 12, name : 'Jawa Timur'},
+  {id: 13, name : 'Jawa Tengah'},
+  {id: 14, name : 'Jawa Barat'},
+  {id: 15, name : 'DKI Jakarta'},
+  {id: 16, name : 'Kalimantan Timur'},
+  {id: 17, name : 'Banten'},
+  {id: 18, name : 'Kalimantan Barat'},
+  {id: 19, name : 'Lainnya Domestik'}];
+ lst: any;
   constructor(private routing: ActivatedRoute) { }
 
   ngOnInit() {
     this.series =  this.routing.snapshot.queryParamMap.get('i');
     this.country =  Number(this.routing.snapshot.queryParamMap.get('a')) - 1;
-    console.log(this.country);
+
     if (this.series === 'Domestic') {
         this.country = Number(Number(this.routing.snapshot.queryParamMap.get('a')) + 11);
-        console.log(this.country);
     }
+    console.log(this.country);
+    const ll = this.ls.find(fruit => fruit.id === this.country );
+    this.lst = ll.name;
+    console.log(this.lst);
     this.visitData = this.month[0][this.country];
     this.visitDataOpt = this.opt[0][this.country];
     this.locations = this.visited[0][this.country];
@@ -395,10 +419,10 @@ export class ActionComponent implements OnInit {
               splitArea: {
                 show: true,
                 areaStyle: {
-                 color: ['rgba(255,0,0,0.0)', 'rgba(255,0,0,0.0)', 'rgba(255,0,0,0.0)', 'rgba(255,0,0,0.0)', 'rgba(255,0,0,0.0)',
-                 'rgba(255,0,0,0.0)', 'rgba(0,0,0,.2)', 'rgba(0,0,0,.2)', 'rgba(0,0,0,.2)', 'rgba(0,0,0,.2)', 'rgba(0,0,0,.2)',
-                 'rgba(0,0,0,.2)']
-                 }
+                  color: ['rgba(255,0,0,0.0)', 'rgba(255,0,0,0.0)', 'rgba(255,0,0,0.0)', 'rgba(255,0,0,0.0)', 'rgba(255,0,0,0.0)',
+                  'rgba(255,0,0,0.0)', 'rgba(0,0,0,.2)', 'rgba(0,0,0,.2)', 'rgba(0,0,0,.2)', 'rgba(0,0,0,.2)', 'rgba(0,0,0,.2)',
+                  'rgba(0,0,0,.2)']
+                  }
                },
               axisLine: {
                 lineStyle: {
